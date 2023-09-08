@@ -3,11 +3,11 @@ from hugchat import hugchat
 from hugchat.login import Login
 
 # App title
-st.set_page_config(page_title="LLM Question Answering Chatbot")
+st.set_page_config(page_title="LLM Chatbot")
 
 # Hugging Face Credentials
 with st.sidebar:
-    st.title('LLM Question Answering Chatbot')
+    st.title('LLM Question Answering Chatbot 🤗')
     if ('EMAIL' in st.secrets) and ('PASS' in st.secrets):
         st.success('HuggingFace Login credentials already provided!', icon='✅')
         hf_email = st.secrets['EMAIL']
@@ -22,7 +22,8 @@ with st.sidebar:
         
 # Store LLM generated responses
 if "messages" not in st.session_state.keys():
-    st.session_state.messages = [{"role": "assistant", "content": "Welcome to Hugging Face Q&A Chat Assistant"}]
+    st.session_state.messages = [{"role": "assistant", "content": "Welcome to Hugging Face Q&A Chatbit Assistant 🤗"}]
+    st.session_state.messages = [{"role": "assistant", "content": "How can I help you ?"}]
 
 # Display chat messages
 for message in st.session_state.messages:
