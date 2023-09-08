@@ -1,6 +1,6 @@
 #  Chat App using Hugging Face LLM Model 
 ```
-⬆️ (Replace above with your app's name)
+
 ```
 
 Description of the app ...
