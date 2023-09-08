@@ -16,7 +16,7 @@ with st.sidebar:
         hf_email = st.text_input('Enter E-mail:', type='password')
         hf_pass = st.text_input('Enter password:', type='password')
         if not (hf_email and hf_pass):
-            st.warning('Please enter your credentials!', icon='⚠️')
+            st.warning('Please enter your credentials!')
         else:
             st.success('Proceed to entering your prompt message!', icon='👉')
         
