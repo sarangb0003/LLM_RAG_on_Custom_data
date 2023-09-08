@@ -22,8 +22,7 @@ with st.sidebar:
         
 # Store LLM generated responses
 if "messages" not in st.session_state.keys():
-    st.session_state.messages = [{"role": "assistant", "content": "Welcome to Hugging Face Q&A Chatbit Assistant 🤗"}]
-    st.session_state.messages = [{"role": "assistant", "content": "How can I help you ?"}]
+    st.session_state.messages = [{"role": "assistant", "content": "Welcome to HuggingFace Chatbot Assistant 🤗. How can I help you ?"}]
 
 # Display chat messages
 for message in st.session_state.messages:
