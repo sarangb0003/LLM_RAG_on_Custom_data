@@ -29,31 +29,13 @@ for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.write(message["content"])
 
-model = "meta-llama/Llama-2-7b-chat-hf"
-
-tokenizer = AutoTokenizer.from_pretrained(model)
-pipeline = transformers.pipeline(
-    "text-generation",
-    model=model,
-    torch_dtype=torch.float16,
-    device_map="auto",
-)
-
 # Function for generating LLM response
 def generate_response(prompt_input, email, passwd):
     # Hugging Face Login
     sign = Login(email, passwd)
     cookies = sign.login()
     # Create ChatBot                        
-    #chatbot = hugchat.ChatBot(cookies=cookies.get_dict())
-    sequences = pipeline(
-    prompt_input,
-    do_sample=True,
-    top_k=10,
-    num_return_sequences=1,
-    eos_token_id=tokenizer.eos_token_id,
-    max_length=200,
-)
+    chatbot = hugchat.ChatBot(cookies=cookies.get_dict())
     return sequences.chat(prompt_input)
 
 # User-provided prompt
