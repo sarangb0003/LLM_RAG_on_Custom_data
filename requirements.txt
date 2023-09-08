@@ -2,4 +2,3 @@ streamlit
 hugchat==0.0.8
 transformers
 torch
-huggingface-cli login
