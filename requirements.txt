@@ -1,2 +1,5 @@
-streamlit
-hugchat==0.0.8
+﻿langchain
+pypdf
+streamlit==1.22.
+streamlit-chat
+tiktoken
