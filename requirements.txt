@@ -1,9 +1,10 @@
 ﻿langchain
--U docarray
+docarray
 pypdf
 streamlit
 streamlit-chat
 tiktoken
 pandasai
 pdfplumber
-pydantic
+pydantic==1.10.9
+hnswlib
