@@ -1,9 +1,9 @@
 ﻿langchain
-langchain[DocArrayInMemorySearch]
-docarray
+-U docarray
 pypdf
-streamlit==1.22.
+streamlit
 streamlit-chat
 tiktoken
 pandasai
 pdfplumber
+pydantic
