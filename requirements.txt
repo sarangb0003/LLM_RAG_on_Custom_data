@@ -3,4 +3,4 @@ pypdf
 streamlit
 streamlit-chat
 tiktoken
-faiss-cpu
+faiss
