@@ -1,6 +1,4 @@
 python==3.9.7
-Cython
-sentencepiece
 chromadb
 langchain
 pypdf
