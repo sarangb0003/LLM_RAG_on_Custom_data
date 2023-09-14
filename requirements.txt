@@ -1,7 +1,6 @@
-python==3.9.7
-chromadb
 langchain
 pypdf
 streamlit
 streamlit-chat
 tiktoken
+faiss-cpu
