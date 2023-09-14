@@ -1,4 +1,5 @@
-﻿langchain[all]
+docarray
+langchain
 pypdf
 streamlit
 streamlit-chat
