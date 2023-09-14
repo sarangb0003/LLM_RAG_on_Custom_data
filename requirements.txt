@@ -4,3 +4,5 @@ pypdf
 streamlit==1.22.
 streamlit-chat
 tiktoken
+pandasai
+pdfplumber
