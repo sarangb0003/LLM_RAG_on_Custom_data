@@ -1,10 +1,8 @@
-docarray
+Cython
+sentencepiece
 chromadb
 langchain
 pypdf
 streamlit
 streamlit-chat
 tiktoken
-pandasai
-pdfplumber
-pydantic==1.10.9
