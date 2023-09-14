@@ -1,4 +1,5 @@
 ﻿langchain
+langchain[docarray]
 pypdf
 streamlit==1.22.
 streamlit-chat
