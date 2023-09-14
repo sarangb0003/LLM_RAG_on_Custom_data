@@ -1,5 +1,4 @@
-﻿langchain
-docarray
+﻿langchain[all]
 pypdf
 streamlit
 streamlit-chat
@@ -7,4 +6,3 @@ tiktoken
 pandasai
 pdfplumber
 pydantic==1.10.9
-hnswlib
