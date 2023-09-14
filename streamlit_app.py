@@ -35,17 +35,17 @@ if uploaded_file :
 
     loader = PyPDFLoader(file_path=tmp_file_path)
     documents = loader.load()
-    text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=150)
+    text_splitter = RecursiveCharacterTextSplitter(chunk_size=900, chunk_overlap=150)
     docs = text_splitter.split_documents(documents)
     
 
-    embeddings = HuggingFaceInferenceAPIEmbeddings(api_key=huggingface_api_key)
+    embeddings = HuggingFaceInferenceAPIEmbeddings(api_key=user_api_key)
     vectors = DocArrayInMemorySearch.from_documents(docs, embeddings)
     
-    retriever = vectors.as_retriever(search_type="similarity", search_kwargs={"k": k})
+    retriever = vectors.as_retriever(search_type="similarity", search_kwargs={"k": 3})
     
 
-    chain = ConversationalRetrievalChain.from_llm(llm = HuggingFaceHub(huggingfacehub_api_token=huggingface_api_key,
+    chain = ConversationalRetrievalChain.from_llm(llm = HuggingFaceHub(huggingfacehub_api_token=user_api_key,
                                                                        repo_id=repo_id, retriever=retriever),
                                                                       return_source_documents=True,
                                                                         return_generated_question=True,model_kwargs={"temperature": 0.1})
