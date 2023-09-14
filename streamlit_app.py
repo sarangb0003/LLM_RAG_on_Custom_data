@@ -11,7 +11,8 @@ from langchain.chains import ConversationalRetrievalChain,RetrievalQA
 # from langchain.document_loaders.csv_loader import CSVLoader
 from langchain.document_loaders import PyPDFLoader,TextLoader
 # from langchain.vectorstores import FAISS
-from langchain.vectorstores import DocArrayInMemorySearch
+#from langchain.vectorstores import DocArrayInMemorySearch
+from langchain.vectorstores import Chroma
 import tempfile
 
 from langchain.text_splitter import CharacterTextSplitter,RecursiveCharacterTextSplitter
@@ -40,7 +41,7 @@ if uploaded_file :
     
 
     embeddings = HuggingFaceInferenceAPIEmbeddings(api_key=user_api_key)
-    vectors = DocArrayInMemorySearch.from_documents(docs, embeddings)
+    vectors = Chroma.from_documents(docs, embeddings)
     
     retriever = vectors.as_retriever(search_type="similarity", search_kwargs={"k": 3})
     
