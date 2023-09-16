@@ -22,14 +22,26 @@ user_api_key = st.sidebar.text_input(
     placeholder="Paste your openAI API key, sk-",
     type="password")
 
-uploaded_file = st.sidebar.file_uploader("upload", type="pdf")
+
+selectbox = st.sidebar.selectbox(
+    "Select file type",
+    ("PDF", "CSV")
+)
+
+if selectbox == "PDF":
+    uploaded_file = st.sidebar.file_uploader("upload", type="pdf")
+else:
+    aded_file = st.sidebar.file_uploader("upload", type="csv")
 
 if uploaded_file :
     with tempfile.NamedTemporaryFile(delete=False) as tmp_file:
         tmp_file.write(uploaded_file.getvalue())
         tmp_file_path = tmp_file.name
-
-    loader = (PyPDFLoader(file_path=tmp_file_path)) or (CSVLoader(file_path=tmp_file_path))
+    if selectbox == "PDF":
+        loader = PyPDFLoader(file_path=tmp_file_path)
+    else:
+        loader = CSVLoader(file_path=tmp_file_path,, encoding="utf-8")
+        
     documents = loader.load()
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=150)
     docs = text_splitter.split_documents(documents)
@@ -37,10 +49,10 @@ if uploaded_file :
     embeddings = HuggingFaceInferenceAPIEmbeddings(api_key=user_api_key )
     
     try:
-        vectors = Chroma.from_documents(documents=docs, embedding=embeddings, persist_directory='./chroma_db')
+        vectors = Chroma.from_documents(documents=docs, embedding=embeddings)
     except InvalidDimensionException:
         Chroma().delete_collection()
-        vectors = Chroma.from_documents(documents=docs, embedding=embeddings, persist_directory='./chroma_db')
+        vectors = Chroma.from_documents(documents=docs, embedding=embeddings)
     
     retriever = vectors.as_retriever()
     
