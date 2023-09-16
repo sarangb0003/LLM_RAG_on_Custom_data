@@ -47,7 +47,7 @@ if uploaded_file :
     if selectbox == "PDF":
         loader = PyPDFLoader(file_path=tmp_file_path)
     else:
-        loader = CSVLoader(file_path=tmp_file_path,, encoding="utf-8")
+        loader = CSVLoader(file_path=tmp_file_path, encoding="utf-8")
         
     documents = loader.load()
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=150)
