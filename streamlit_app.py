@@ -16,6 +16,10 @@ from chromadb.errors import InvalidDimensionException
 repo_id = "google/flan-t5-xxl"
 # repo_id = "tiiuae/falcon-40b"
 
+st.set_page_config(page_title="LLM Chatbot")
+
+st.title('LLM Question Answering Chatbot 🤗')
+
 # App title
 user_api_key = st.sidebar.text_input(
     label="#### Your OpenAI API key 👇",
@@ -32,6 +36,8 @@ if selectbox == "PDF":
     uploaded_file = st.sidebar.file_uploader("upload", type="pdf")
 else:
     aded_file = st.sidebar.file_uploader("upload", type="csv")
+
+st.sidebar.caption('Creared by: Sarang Bagul')
 
 if uploaded_file :
     with tempfile.NamedTemporaryFile(delete=False) as tmp_file:
