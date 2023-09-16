@@ -18,7 +18,7 @@ repo_id = "google/flan-t5-xxl"
 
 st.set_page_config(page_title="LLM Chatbot")
 
-st.title('LLM Question Answering Chatbot 🤗')
+st.sidebar.title('LLM Question Answering Chatbot 🤗')
 
 # App title
 user_api_key = st.sidebar.text_input(
