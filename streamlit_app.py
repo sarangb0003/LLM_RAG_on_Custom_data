@@ -18,7 +18,7 @@ repo_id = "google/flan-t5-xxl"
 
 st.set_page_config(page_title="Fine Tune LLM Chatbot") 
 
-st.set_page_config(page_title="LLM Chatbot")
+# st.set_page_config(page_title="LLM Chatbot")
 
 st.sidebar.title('LLM Question Answering Chatbot 🤗')
 
