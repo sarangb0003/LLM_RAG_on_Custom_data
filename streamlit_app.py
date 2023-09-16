@@ -27,17 +27,14 @@ user_api_key = st.sidebar.text_input(
     type="password")
 
 
-selectbox = st.sidebar.selectbox(
-    "Select file type",
-    ("PDF", "CSV")
-)
+selectbox = st.sidebar.selectbox("Select file type",("PDF", "CSV"))
 
 if selectbox == "PDF":
     uploaded_file = st.sidebar.file_uploader("upload", type="pdf")
 else:
     uploaded_file = st.sidebar.file_uploader("upload", type="csv")
 
-st.sidebar.caption('Creared by: Sarang Bagul')
+st.sidebar.caption('**Creared by: Sarang Bagul**')
 
 if uploaded_file :
     with tempfile.NamedTemporaryFile(delete=False) as tmp_file:
