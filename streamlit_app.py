@@ -27,12 +27,14 @@ user_api_key = st.sidebar.text_input(
     type="password")
 
 
-selectbox = st.sidebar.selectbox("Select file type",("PDF", "CSV"))
+# selectbox = st.sidebar.selectbox("Select file type",("PDF", "CSV"))
 
-if selectbox == "PDF":
-    uploaded_file = st.sidebar.file_uploader("upload", type="pdf")
-else:
-    uploaded_file = st.sidebar.file_uploader("upload", type="csv")
+# if selectbox == "PDF":
+#     uploaded_file = st.sidebar.file_uploader("upload", type="pdf")
+# else:
+#     uploaded_file = st.sidebar.file_uploader("upload", type="csv")
+
+uploaded_file = st.sidebar.file_uploader("upload", type="pdf")
 
 # st.sidebar.caption('**Creared by: Sarang Bagul**')
 # st.sidebar.subheader('_Streamlit_ is :blue[cool] :sunglasses:')
@@ -44,11 +46,12 @@ if uploaded_file :
         tmp_file.write(uploaded_file.getvalue())
         tmp_file_path = tmp_file.name
         
-    if selectbox == "PDF":
-        loader = PyPDFLoader(file_path=tmp_file_path)
-    else:
-        loader = CSVLoader(file_path=tmp_file_path, encoding="utf-8")
-        
+    # if selectbox == "PDF":
+    #     loader = PyPDFLoader(file_path=tmp_file_path)
+    # else:
+    #     loader = CSVLoader(file_path=tmp_file_path, encoding="utf-8")
+
+    loader = PyPDFLoader(file_path=tmp_file_path)
     documents = loader.load()
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=150)
     docs = text_splitter.split_documents(documents)
