@@ -5,7 +5,7 @@ from langchain.memory import ConversationBufferMemory
 
 from langchain import HuggingFaceHub
 from langchain.chains import ConversationalRetrievalChain,RetrievalQA
-from langchain.document_loaders import PyPDFLoader
+from langchain.document_loaders import PyPDFLoader,CSVLoader
 from langchain.vectorstores import Chroma
 import tempfile
 
@@ -29,7 +29,7 @@ if uploaded_file :
         tmp_file.write(uploaded_file.getvalue())
         tmp_file_path = tmp_file.name
 
-    loader = PyPDFLoader(file_path=tmp_file_path)
+    loader = (PyPDFLoader(file_path=tmp_file_path)) or (CSVLoader(file_path=tmp_file_path))
     documents = loader.load()
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=150)
     docs = text_splitter.split_documents(documents)
