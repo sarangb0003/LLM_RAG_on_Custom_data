@@ -13,7 +13,8 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.memory import ConversationBufferMemory
 from chromadb.errors import InvalidDimensionException
 
-repo_id = "google/flan-t5-xxl"
+# repo_id = "google/flan-t5-xxl"
+repo_id = "tiiuae/falcon-40b"
 
 # App title
 user_api_key = st.sidebar.text_input(
@@ -30,7 +31,7 @@ if uploaded_file :
 
     loader = PyPDFLoader(file_path=tmp_file_path)
     documents = loader.load()
-    text_splitter = RecursiveCharacterTextSplitter(chunk_size=1500, chunk_overlap=150)
+    text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=150)
     docs = text_splitter.split_documents(documents)
     
     embeddings = HuggingFaceInferenceAPIEmbeddings(api_key=user_api_key )
