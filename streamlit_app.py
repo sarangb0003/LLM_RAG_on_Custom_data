@@ -16,16 +16,16 @@ from chromadb.errors import InvalidDimensionException
 repo_id = "google/flan-t5-xxl"
 # repo_id = "tiiuae/falcon-40b"
 
-st.set_page_config(page_title="Fine Tune LLM Chatbot") 
+st.set_page_config(page_title="Fine Tuned LLM Chatbot") 
 
 # st.set_page_config(page_title="LLM Chatbot")
 
-st.sidebar.title('LLM Question Answering Chatbot 🤗')
+st.sidebar.title('Fine-Tuned LLM Question Answering Chatbot 🤗')
 
 # App title
 user_api_key = st.sidebar.text_input(
-    label="#### Your OpenAI API key 👇",
-    placeholder="Paste your openAI API key, sk-",
+    label="#### Your HuggingFaceHub API key 👇",
+    placeholder="Paste your HuggingFaceHub API key",
     type="password")
 
 
@@ -86,7 +86,7 @@ if uploaded_file :
 #         st.session_state['history'] = []
 
     if "messages" not in st.session_state.keys():
-        st.session_state.messages = [{"role": "assistant", "content": "Welcome to HuggingFace Chatbot Assistant 🤗. How can I help you ?"}]
+        st.session_state.messages = [{"role": "assistant", "content": "Welcome to LLM Q&A bot Assistant 🤗. How can I help you ?"}]
     
     # Display chat messages
     for message in st.session_state.messages:
