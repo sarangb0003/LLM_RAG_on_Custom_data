@@ -3,4 +3,3 @@ pypdf
 streamlit
 streamlit-chat
 tiktoken
-chromadb
