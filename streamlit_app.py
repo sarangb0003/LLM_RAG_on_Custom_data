@@ -38,7 +38,7 @@ uploaded_file = st.sidebar.file_uploader("upload", type="pdf")
 
 # st.sidebar.caption('**Creared by: Sarang Bagul**')
 # st.sidebar.subheader('_Streamlit_ is :blue[cool] :sunglasses:')
-st.sidebar.subheader('_Created by_: **Sarang Bagul**')
+st.sidebar.subheader('Created by: **_Sarang Bagul_**')
 
 
 if uploaded_file :
