@@ -35,7 +35,7 @@ selectbox = st.sidebar.selectbox(
 if selectbox == "PDF":
     uploaded_file = st.sidebar.file_uploader("upload", type="pdf")
 else:
-    aded_file = st.sidebar.file_uploader("upload", type="csv")
+    uploaded_file = st.sidebar.file_uploader("upload", type="csv")
 
 st.sidebar.caption('Creared by: Sarang Bagul')
 
@@ -43,6 +43,7 @@ if uploaded_file :
     with tempfile.NamedTemporaryFile(delete=False) as tmp_file:
         tmp_file.write(uploaded_file.getvalue())
         tmp_file_path = tmp_file.name
+        
     if selectbox == "PDF":
         loader = PyPDFLoader(file_path=tmp_file_path)
     else:
