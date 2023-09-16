@@ -37,10 +37,10 @@ if uploaded_file :
     embeddings = HuggingFaceInferenceAPIEmbeddings(api_key=user_api_key )
     
     try:
-        vectors = Chroma.from_documents(documents=docs, embedding=embeddings)
+        vectors = Chroma.from_documents(documents=docs, embedding=embeddings, persist_directory='db')
     except InvalidDimensionException:
         Chroma().delete_collection()
-        vectors = Chroma.from_documents(documents=docs, embedding=embeddings)
+        vectors = Chroma.from_documents(documents=docs, embedding=embeddings, persist_directory='db')
     
     retriever = vectors.as_retriever()
     
