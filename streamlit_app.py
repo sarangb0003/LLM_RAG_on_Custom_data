@@ -30,7 +30,7 @@ if uploaded_file :
 
     loader = PyPDFLoader(file_path=tmp_file_path)
     documents = loader.load()
-    text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=150)
+    text_splitter = RecursiveCharacterTextSplitter(chunk_size=1500, chunk_overlap=150)
     docs = text_splitter.split_documents(documents)
     
     embeddings = HuggingFaceInferenceAPIEmbeddings(api_key=user_api_key )
