@@ -13,8 +13,8 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.memory import ConversationBufferMemory
 from chromadb.errors import InvalidDimensionException
 
-# repo_id = "google/flan-t5-xxl"
-repo_id = "tiiuae/falcon-40b"
+repo_id = "google/flan-t5-xxl"
+# repo_id = "tiiuae/falcon-40b"
 
 # App title
 user_api_key = st.sidebar.text_input(
