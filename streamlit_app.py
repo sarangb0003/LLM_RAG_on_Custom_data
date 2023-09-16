@@ -35,7 +35,9 @@ else:
     uploaded_file = st.sidebar.file_uploader("upload", type="csv")
 
 # st.sidebar.caption('**Creared by: Sarang Bagul**')
-st.sidebar.subheader('_Streamlit_ is :blue[cool] :sunglasses:')
+# st.sidebar.subheader('_Streamlit_ is :blue[cool] :sunglasses:')
+st.sidebar.subheader('_Created by_: **Sarang Bagul**')
+
 
 if uploaded_file :
     with tempfile.NamedTemporaryFile(delete=False) as tmp_file:
