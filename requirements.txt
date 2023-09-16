@@ -3,4 +3,4 @@ pypdf
 streamlit
 streamlit-chat
 tiktoken
-chromadb
+chromadb == 0.3.29
