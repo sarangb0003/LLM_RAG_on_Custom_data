@@ -10,11 +10,10 @@ Created a Fine-tuned LLM model for question answering on custom data.
 - Langchain package and dependencies
 - chromadb
 - HuggingFace model "google/flan-t5-xxl"
-<br>
 
 ## Demo:
 [Demo Fine Tuned LLM for Custom Data](https://github.com/sarangb0003/Fine-Tuned-LLM-for-Custom-Data/assets/61322867/478c4498-1937-46db-8179-8550004ec6ad)
-
+<br>
 ## Obsrevations:
 1) for the question "Which city is the capital of England ?" <br>
 --> Model answered it correctly as "London".
