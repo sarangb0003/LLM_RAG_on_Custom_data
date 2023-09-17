@@ -12,7 +12,8 @@ Created a Fine-tuned LLM model for question answering on custom data.
 - HuggingFace model "google/flan-t5-xxl"
 
 ## Demo
-[streamlit-streamlit_app-2023-09-16-23-09-12.webm](https://github.com/sarangb0003/Fine-Tuned-LLM-for-Custom-Data/assets/61322867/50141176-177f-4820-bf16-5140312b921a)
+[streamlit-streamlit_app-2023-09-16-23-09-12.webm](https://github.com/sarangb0003/Fine-Tuned-LLM-for-Custom-Data/assets/61322867/478c4498-1937-46db-8179-8550004ec6ad)
+
 
 
 ## Obsrevations
