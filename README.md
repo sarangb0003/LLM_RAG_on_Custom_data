@@ -1,22 +1,25 @@
-#  Chat App using Hugging Face LLM Model 
+#  Fine-Tuned-LLM-for-Custom-Data  
 ```
-Created a Simple Question Answering chatbot App using streamlit which will generate Human like answers to your questions.  
+Created a Fine-tuned LLM model for question answering on custom data.   
 ```
 
 ## Pre-requisites
-
-- Python 3.9
-- Account with Streamlit & HuggingFace
-- HuggingFace Chatbot LLM model
+- Python
+- Account with Streamlit
+- HuggingFace API key
+- Langchain package and dependencies
+- chromadb
+- HuggingFace model "google/flan-t5-xxl"
 
 ## Demo
-![streamlit output](https://github.com/sarangb0003/App_LLM_HuggingFace_ChatBot/assets/61322867/4fc32544-383a-4086-9e1d-abc2abbda64e)
+[streamlit-streamlit_app-2023-09-16-23-09-12.webm](https://github.com/sarangb0003/Fine-Tuned-LLM-for-Custom-Data/assets/61322867/50141176-177f-4820-bf16-5140312b921a)
+
 
 ## Obsrevations
 
 Founds two interesting answers from model output:
-1) For question "how to write resume for Data science position ?"
---> It has written the answer specific to data science field.
+1)  For the question "Which city is the capital of England ?"
+--> Model answered it correctly as "London".
    
 2) For question "write python code to Combine two lists and remove duplicates without using set function"
 --> provided the code with no use of set() python code as expected.
