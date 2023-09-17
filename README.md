@@ -12,18 +12,21 @@ Created a Fine-tuned LLM model for question answering on custom data.
 - HuggingFace model "google/flan-t5-xxl"
 
 ## Demo
-[streamlit-streamlit_app-2023-09-16-23-09-12.webm](https://github.com/sarangb0003/Fine-Tuned-LLM-for-Custom-Data/assets/61322867/478c4498-1937-46db-8179-8550004ec6ad)
-
-
+[Demo Fine Tuned LLM for Custom Data](https://github.com/sarangb0003/Fine-Tuned-LLM-for-Custom-Data/assets/61322867/478c4498-1937-46db-8179-8550004ec6ad)
 
 ## Obsrevations
-
-Founds two interesting answers from model output:
-1)  For the question "Which city is the capital of England ?"
+1) for the question "Which city is the capital of England ?" <br>
 --> Model answered it correctly as "London".
-   
-2) For question "write python code to Combine two lists and remove duplicates without using set function"
---> provided the code with no use of set() python code as expected.
+2) On which river it stands ? <br>
+--> Here, I have asked the question by giving the input as "it" and the bot was correctly able to correlate that i was referring to "London" city. So by considering that, model was correctly able to answer it as "Thames". Same behavior observed for questions asked later in demo (check in demo video).
+
+✨Conclusion:
+--> LLM model was able to answer the questions correctly for custom/unknown data provided. <br> 
+--> LLM model was able to answer the questions correctly for custom/unknown data provided. It was able to memorize the context of conversation and answered the follow up questions by taking reference of previous question asked.
+
+✨Note:
+--> Generated Results are short due to token size limit of models. <br>
+--> Model may generate inaccurate or false content.
 
 ## Future Work
 
