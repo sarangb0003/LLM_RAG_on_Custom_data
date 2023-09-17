@@ -1,4 +1,4 @@
-#  Fine-Tuned-LLM-for-Custom-Data  
+#  Fine-Tuned LLM for Custom Data  
 ```
 Created a Fine-tuned LLM model for question answering on custom data.   
 ```
@@ -12,8 +12,13 @@ Created a Fine-tuned LLM model for question answering on custom data.
 - HuggingFace model "google/flan-t5-xxl"
 
 ## Demo:
-[Demo Fine Tuned LLM for Custom Data](https://github.com/sarangb0003/Fine-Tuned-LLM-for-Custom-Data/assets/61322867/478c4498-1937-46db-8179-8550004ec6ad)
+![streamlit-streamlit_app-2023-09-16-23-09-12](https://github.com/sarangb0003/Fine-Tuned-LLM-for-Custom-Data/assets/61322867/fa6f8486-7c7c-423c-be1b-b1c05bc55fa0)
 <br>
+
+## Input data used in Demo:
+[London_removed.pdf](https://github.com/sarangb0003/Fine-Tuned-LLM-for-Custom-Data/files/12642304/London_removed.pdf)
+<br>
+
 ## Obsrevations:
 1) for the question "Which city is the capital of England ?" <br>
 --> Model answered it correctly as "London".
