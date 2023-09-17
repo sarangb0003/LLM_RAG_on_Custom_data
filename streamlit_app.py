@@ -18,8 +18,6 @@ repo_id = "google/flan-t5-xxl"
 
 st.set_page_config(page_title="Fine Tuned LLM Chatbot") 
 
-# st.set_page_config(page_title="LLM Chatbot")
-
 st.sidebar.title('Fine-Tuned LLM Question Answering Chatbot 🤗')
 
 # App title
