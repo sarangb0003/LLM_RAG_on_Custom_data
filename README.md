@@ -1,6 +1,7 @@
-#  Fine-Tuned LLM for Custom Data  
+#  QA bot using LLMs with RAG on Custom Data  
 ```
-Created a Fine-tuned LLM model for question answering on custom data.   
+Created a bot for Question Answering using LLM model with RAG
+which can answer the question from custom data   
 ```
 
 ## Pre-requisites:
