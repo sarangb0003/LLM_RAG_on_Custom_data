@@ -28,7 +28,7 @@ which can answer the question from custom data
 
 ## Conclusion:
 --> LLM model was able to answer the questions correctly for custom/unknown data provided. <br> 
---> LLM model was able to answer the questions correctly for custom/unknown data provided. It was able to memorize the context of conversation and answered the follow up questions by taking reference of previous question asked.
+--> It was able to memorize the context of conversation and answered the follow up questions by taking reference of previous question asked.
 
 ## Note:
 --> Generated Results are short due to token size limit of models. <br>
